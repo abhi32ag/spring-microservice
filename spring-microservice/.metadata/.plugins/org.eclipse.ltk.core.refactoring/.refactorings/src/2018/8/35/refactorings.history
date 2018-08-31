@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;src/main/java/com/abhinavgarg/micrservice1&apos; to &apos;microservice1&apos;" description="Rename resource &apos;micrservice1&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="main/java/com/abhinavgarg/micrservice1" name="microservice1" stamp="1535595186748" updateReferences="true"/>
+</session>

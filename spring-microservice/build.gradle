@@ -1,0 +1,47 @@
+buildscript {
+	ext {
+		springBootVersion     = "1.5.2.RELEASE"
+		gradleDockerVersion   = "1.2"
+	}
+	repositories {
+		mavenCentral()
+	}
+	dependencies {
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+		classpath("se.transmode.gradle:gradle-docker:${gradleDockerVersion}")
+	}
+}
+
+apply plugin: "java"
+apply plugin: "application"
+apply plugin: "eclipse"
+apply plugin: "org.springframework.boot"
+apply plugin: "docker"
+
+compileJava {
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+    mainClassName       = "com.abhinavgarg.microservice1.AppEntry"
+}
+
+jar {
+    baseName = "api-films"
+    group    = "com.abhinavgarg"
+    version  = "0.0.1-SNAPSHOT"
+    manifest { attributes "Main-Class": "com.abhinavgarg.microservice1.AppEntry" }
+}
+
+docker {
+    baseImage "frolvlad/alpine-oraclejdk8:slim"
+    maintainer 'Abhinav Garg "aagarg@uw.edu"'
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	compile("org.springframework.boot:spring-boot-starter-web")
+	compile("org.springframework.data:spring-data-mongodb")
+	testCompile("org.springframework.boot:spring-boot-starter-test")
+}
