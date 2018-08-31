@@ -67,4 +67,4 @@ docker run \
 ### 7. Test using Rest calls
 ```
 reset && curl   -H 'Content-Type:application/json'  -X POST 'http://localhost:9002/visitors' -d '{ "name" : "Abhinav Garg" }' # | python -m json.tool
-`
+```
