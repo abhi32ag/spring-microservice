@@ -3,6 +3,11 @@ New project that implements spring boot with docker
 
 ## Get Started
 
+To run this project you would require to install Gradle and Docker 
+
+Gradle: https://gradle.org/install#with-a-package-manager
+Docker: https://www.docker.com/community-edition#/download
+
 You can check out the project by following these steps:
 
 ### 1. Clone this Repository
